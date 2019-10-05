@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?xml-stylesheet type="text/xsl" href="movieTest.xsl"?>
+<!-- New document created with EditiX XML Editor (http://www.editix.com) at Sat Dec 01 20:36:23 CET 2018 -->
+
+<moviemanagement title="Movies" 
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="moviemanagement.xsd">
+>
+
+
+<!-- All genres with their unique ID and a description -->	
+<genres>
+	<genre>
+		<id>G1</id>
+		<description>biography</description>
+	</genre>
+	
+	<genre>
+		<id>G2</id>
+		<description>drama</description>
+	</genre>
+	
+	<genre>
+		<id>G3</id>
+		<description>music</description>
+	</genre>
+	
+	<genre>
+		<id>G4</id>
+		<description>action</description>
+	</genre>
+	
+	<genre>
+		<id>G5</id>
+		<description>adventure</description>
+	</genre>
+	
+	<genre>
+		<id>G6</id>
+		<description>comedy</description>
+	</genre>
+	
+	<genre>
+		<id>G7</id>
+		<description>animation</description>
+	</genre>
+	
+	<genre>
+		<id>G8</id>
+		<description>crime</description>
+	</genre>
+	
+	<genre>
+		<id>G9</id>
+		<description>mistery</description>
+	</genre>
+	
+	<genre>
+		<id>G10</id>
+		<description>family</description>
+	</genre>
+	
+</genres>
+
+
+<!-- All languages in the movie management -->	
+<languages>
+	<language>
+		<id>EN</id>
+		<discription>English</discription>
+	</language>
+	
+	<language>
+		<id>DE</id>
+		<discription>German</discription>
+	</language>
+</languages>
+
+
+<!-- People which participated as director or as actors -->	
+<people>
+	<person>
+		<id>P1</id>
+		<fname>Bryan</fname>
+		<lname>Singer</lname>
+	</person>
+	
+	<person>
+		<id>P2</id>
+		<fname>Rami</fname>
+		<lname>Malek</lname>
+	</person>
+	
+	<person>
+		<id>P3</id>
+		<fname>Tim</fname>
+		<lname>Miller</lname>
+	</person>
+	
+	<person>
+		<id>P4</id>
+		<fname>Ryan</fname>
+		<lname>Reynolds</lname>
+	</person>
+	
+	<person>
+		<id>P5</id>
+		<fname>Doroto</fname>
+		<lname>Kobiela</lname>
+	</person>
+	
+	<person>
+		<id>P6</id>
+		<fname>Douglas</fname>
+		<lname>Booth</lname>
+	</person>
+	
+	<person>
+		<id>P7</id>
+		<fname>Kenneth</fname>
+		<lname>Brangh</lname>
+	</person>
+	
+	<person>
+		<id>P8</id>
+		<fname>Albert</fname>
+		<lname>Hughes</lname>
+	</person>
+	
+	<person>
+		<id>P9</id>
+		<fname>Kodi</fname>
+		<lname>Smith-McPhee</lname>
+	</person>
+	
+	<person>
+		<id>P10</id>
+		<fname>Lucy</fname>
+		<lname>Boynton</lname>
+	</person>
+	
+	<person>
+		<id>P11</id>
+		<fname>Karan</fname>
+		<lname>Soni</lname>
+	</person>
+	
+	<person>
+		<id>P12</id>
+		<fname>Josh</fname>
+		<lname>Burdett</lname>
+	</person>
+	
+	<person>
+		<id>P13</id>
+		<fname>Yassine</fname>
+		<lname>Zeroual</lname>
+	</person>
+	
+	<person>
+		<id>P14</id>
+		<fname>Marcin</fname>
+		<lname>Kowalczyk</lname>
+	</person>
+	
+		
+</people>
+
+<movies>
+<!-- First movie "Bohemian Rhapsody" -->
+<movie>
+	<id>M1</id>
+	<title>Bohemian Rhapsody</title>
+	
+<!-- Genres" -->
+	<genre>G1</genre>
+	<genre>G2</genre>
+	<genre>G3</genre>
+
+<!-- Languages -->	
+	<language>
+		<original>EN</original>
+		<subs>DE</subs>
+		<audio>DE</audio>	
+	</language>
+	
+<!-- Details -->	
+	<year>2018</year>
+	<duration>135</duration>
+	<resume>A chronicle of the years leading up to Queen's legendary appearance at the Live Aid (1985) concert.</resume>
+	<image>
+		<link href="https://www.imdb.com/title/tt1727824/mediaviewer/rm2115128576"></link>
+		<copyright>IMDB.com</copyright>
+	</image>
+	
+<!-- Cast -->
+		<director>P1</director>
+		<actor>P2</actor>
+
+		<actor>P10</actor>
+
+<!-- BachdelTest Details -->
+	<bachdelTest>
+		<participated>yes</participated>
+		<outcome>fail</outcome>
+		<age>6</age>
+	</bachdelTest>
+	
+<!-- Availability -->
+	<dvd>
+		<price>17.99</price>
+		<art>2d</art>
+	</dvd>
+	<bluRey>
+		<price>19.99</price>
+	</bluRey>
+	<online url="https://www.amazon.de/Bohemian-Rhapsody/dp/B07K4X3NWN">
+		<price>13.99</price>
+	</online>
+</movie>
+
+<!-- Second movie "Deadpool" -->
+<movie>
+
+	<id>M2</id>
+	<title>Deadpool</title>
+
+<!-- Genres" -->
+	<genre>G4</genre>
+	<genre>G5</genre>
+	<genre>G6</genre>
+	
+<!-- Languages -->	
+	<language>
+		<original>EN</original>
+		<subs>DE</subs>
+		<audio>DE</audio>	
+	</language>
+	
+<!-- Details -->	
+	<year>2016</year>
+	<duration>108</duration>
+	<resume>A fast-talking mercenary with a morbid sense of humor is subjected to a rogue experiment that leaves him with accelerated healing powers and a quest for revenge.</resume>
+	<image>
+		<link href="https://www.imdb.com/title/tt1431045/mediaviewer/rm351021568"></link>
+		<copyright>IMDB.com</copyright>
+	</image>
+	
+<!-- Cast -->	
+		<director>P3</director>
+		<actor>P4</actor>
+		<actor>P11</actor>
+	
+<!-- BachdelTest -->	
+	<bachdelTest>
+		<participated>yes</participated>
+		<outcome>fail</outcome>
+		<age>16</age>
+	</bachdelTest>
+	
+	<dvd>
+		<price>5.99</price>
+		<art>2d</art>
+	</dvd>
+	<bluRey>
+		<price>6.99</price>
+	</bluRey>
+	<online url="https://www.microsoft.com/en-us/p/deadpool/8d6kgx0jcnsj?activetab=pivot%3aoverviewtab">
+		<price>13.15</price>
+	</online>	
+</movie>
+
+
+<movie>
+
+	<id>M3</id>
+	<title>Loving Vincent</title>
+	
+	<genre>G1</genre>
+	<genre>G7</genre>
+	<genre>G8</genre>
+	
+	<language>
+		<original>EN</original>
+		<subs>DE</subs>
+		<audio>DE</audio>	
+	</language>
+	
+	<year>2017</year>
+	<duration>94</duration>
+	<resume>In a story depicted in oil painted animation, a young man comes to the last hometown of painter Vincent van Gogh to deliver the troubled artist's final letter and ends up investigating his final days there..</resume>
+	<image>
+		<link href="https://www.imdb.com/title/tt3262342/mediaviewer/rm2265132032"></link>
+		<copyright>IMDB.com</copyright>
+	</image>
+	
+		<director>P5</director>
+		<actor>P6</actor>
+		<actor>P12</actor>
+	
+	<bachdelTest>
+		<participated>yes</participated>
+		<outcome>fail</outcome>
+		<age>6</age>
+	</bachdelTest>
+	
+	<dvd>
+		<price>11.99</price>
+		<art>2d</art>
+	</dvd>
+	<bluRey>
+		<price>13.99</price>
+	</bluRey>
+	<online url="https://www.amazon.com/Loving-Vincent-Saoirse-Ronan/dp/B076BCD74H">
+		<price>13.99</price>
+	</online>	
+</movie>
+
+
+<movie>
+
+	<id>M4</id>
+	<title>Murder on the Orient Express</title>
+	
+	<genre>G2</genre>
+	<genre>G9</genre>
+	<genre>G8</genre>
+	
+	<language>
+		<original>EN</original>
+		<subs>DE</subs>
+		<audio>DE</audio>	
+	</language>
+	
+	<year>2017</year>
+	<duration>114</duration>
+	<resume>When a murder occurs on the train he's travelling on, celebrated detective Hercule Poirot is recruited to solve the case.</resume>
+	<image>
+		<link href="https://m.media-amazon.com/images/M/MV5BMTAxNDkxODIyMDZeQTJeQWpwZ15BbWU4MDQ2Mjg4NDIy._V1_SY1000_CR0,0,674,1000_AL_.jpg"></link>
+		<copyright>IMDB.com</copyright>
+	</image>
+	
+		<director>P7</director>
+		<actor>P7</actor>
+		<actor>P13</actor>
+	
+	<bachdelTest>
+		<participated>yes</participated>
+		<outcome>passed</outcome>
+		<age>12</age>
+	</bachdelTest>
+	
+	<dvd>
+		<price>9.99</price>
+		<art>2d</art>
+	</dvd>
+	<bluRey>
+		<price>12.99</price>
+	</bluRey>
+	<online url="https://www.amazon.com/Loving-Vincent-Saoirse-Ronan/dp/B076BCD74H">
+		<price>5.99</price>
+	</online>	
+</movie>
+
+<movie>
+
+	<id>M5</id>
+	<title>Alpha</title>
+	
+	<genre>G2</genre>
+	<genre>G5</genre>
+	<genre>G10</genre>
+	
+	<language>
+		<original>EN</original>
+		<subs>DE</subs>
+		<audio>DE</audio>	
+	</language>
+	
+	<year>2018</year>
+	<duration>96</duration>
+	<resume>In the prehistoric past, a young man struggles to return home after being separated from his tribe during a buffalo hunt. He finds a similarly lost wolf companion and starts a friendship that would change humanity.</resume>
+	<image>
+		<link href="https://www.imdb.com/title/tt4244998/mediaviewer/rm1402894848"></link>
+		<copyright>IMDB.com</copyright>
+	</image>
+	
+		<director>P8</director>
+		<actor>P9</actor>
+		<actor>P14</actor>
+	
+	<bachdelTest>
+		<participated>yes</participated>
+		<outcome>fail</outcome>
+		<age>12</age>
+	</bachdelTest>
+	
+	<dvd>
+		<price>15.99</price>
+		<art>2d</art>
+	</dvd>
+	<bluRey>
+		<price>18.99</price>
+	</bluRey>
+	<online url="https://www.amazon.com/Alpha-Kodi-Smit-McPhee/dp/B07GJV8S5R/?tag=sphe-alpha-site-20">
+		<price>14.99</price>
+	</online>	
+</movie>
+
+</movies>
+</moviemanagement>

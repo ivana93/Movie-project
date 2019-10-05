@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+<xs:include schemaLocation="moviemanagement.xsd"/>
+
+  <xs:element name="moviemanagement">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="genres"/>
+        <xs:element ref="languages"/>
+        <xs:element ref="people"/>
+        <xs:element ref="movies"/>
+      </xs:sequence>
+      <xs:attribute name="title" use="required" type="xs:NCName"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="genres">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="genre"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="languages">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="language"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="people">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="person"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="person">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="fname"/>
+        <xs:element ref="lname"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="fname" type="xs:NCName"/>
+  <xs:element name="lname" type="xs:NCName"/>
+  <xs:element name="movies">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element maxOccurs="unbounded" ref="movie"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="movie">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="id"/>
+        <xs:element ref="title"/>
+        <xs:element maxOccurs="unbounded" ref="genre"/>
+        <xs:element ref="language"/>
+        <xs:element ref="year"/>
+        <xs:element ref="duration"/>
+        <xs:element ref="resume"/>
+        <xs:element ref="image"/>
+        <xs:element ref="director"/>
+        <xs:element maxOccurs="unbounded" ref="actor"/>
+        <xs:element ref="bachdelTest"/>
+        <xs:element ref="dvd"/>
+        <xs:element ref="bluRey"/>
+        <xs:element ref="online"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="title" type="xs:string"/>
+  <xs:element name="year" type="xs:integer"/>
+  <xs:element name="duration" type="xs:integer"/>
+  <xs:element name="resume" type="xs:string"/>
+  <xs:element name="image">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="link"/>
+        <xs:element ref="copyright"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="link">
+    <xs:complexType>
+      <xs:attribute name="href" use="required" type="xs:anyURI"/>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="copyright" type="xs:NCName"/>
+  <xs:element name="director" type="xs:NCName"/>
+  <xs:element name="actor" type="xs:NCName"/>
+  <xs:element name="bachdelTest">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element ref="participated"/>
+        <xs:element ref="outcome"/>
+        <xs:element ref="age"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="participated" type="xs:NCName"/>
+  <xs:element name="outcome" type="xs:NCName"/>
+  <xs:element name="age" type="xs:integer"/>
+  <xs:element name="dvd">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="price">
+          <xs:sequence>
+            <xs:element ref="art"/>
+          </xs:sequence>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="art" type="xs:NMTOKEN"/>
+  <xs:element name="bluRey" type="price"/>
+  <xs:element name="online">
+    <xs:complexType>
+      <xs:complexContent>
+        <xs:extension base="price">
+          <xs:attribute name="url" use="required" type="xs:anyURI"/>
+        </xs:extension>
+      </xs:complexContent>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="genre">
+    <xs:complexType mixed="true">
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element ref="id"/>
+        <xs:element ref="description"/>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="description" type="xs:NCName"/>
+  <xs:element name="language">
+    <xs:complexType>
+      <xs:choice>
+        <xs:sequence>
+          <xs:element ref="original"/>
+          <xs:element ref="subs"/>
+          <xs:element ref="audio"/>
+        </xs:sequence>
+        <xs:sequence>
+          <xs:element ref="id"/>
+          <xs:element ref="discription"/>
+        </xs:sequence>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+  <xs:element name="original" type="xs:NCName"/>
+  <xs:element name="subs" type="xs:NCName"/>
+  <xs:element name="audio" type="xs:NCName"/>
+  <xs:element name="discription" type="xs:NCName"/>
+  <xs:element name="id" type="xs:NCName"/>
+  <xs:complexType name="price">
+    <xs:sequence>
+      <xs:element ref="price"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:element name="price" type="xs:decimal"/>
+</xs:schema>
